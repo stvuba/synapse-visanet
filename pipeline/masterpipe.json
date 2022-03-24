@@ -8,10 +8,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"pipeline": {
-						"referenceName": "DeltaToLakeDB",
-						"type": "PipelineReference"
-					},
 					"waitOnCompletion": true
 				}
 			},
