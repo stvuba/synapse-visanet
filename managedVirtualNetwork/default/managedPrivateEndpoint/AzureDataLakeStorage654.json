@@ -1,0 +1,7 @@
+{
+	"name": "AzureDataLakeStorage654",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9d46754e-1a5d-4594-a51a-b97a2b5e8fc9/resourceGroups/ubalab/providers/Microsoft.Storage/storageAccounts/datalakestorageubalab",
+		"groupId": "dfs"
+	}
+}
