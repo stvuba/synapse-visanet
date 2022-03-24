@@ -1,0 +1,17 @@
+{
+	"name": "numberofrowslakedb",
+	"properties": {
+		"content": {
+			"query": "SELECT count(*)\n FROM [creditcard].[dbo].[transactions]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "creditcard",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}
