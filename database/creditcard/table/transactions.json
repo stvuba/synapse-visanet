@@ -1,0 +1,66 @@
+{
+	"name": "transactions",
+	"properties": {
+		"Name": "transactions",
+		"EntityType": "TABLE",
+		"Namespace": {
+			"DatabaseName": "creditcard"
+		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "id",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsNullable": true,
+						"IsComplexType": false,
+						"Length": 256,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+				"FormatType": "parquet",
+				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+				"Properties": {
+					"path": "abfss://synapsefs@synapsedatalakevisanet.dfs.core.windows.net/creditcard/transactions",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://synapsefs@synapsedatalakevisanet.dfs.core.windows.net/creditcard/transactions",
+				"Properties": {
+					"LinkedServiceName": "synapse-visanet-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"Description": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+			"PrimaryKeys": "",
+			"spark.sql.sources.provider": "parquet"
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}
