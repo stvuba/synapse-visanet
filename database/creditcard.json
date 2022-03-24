@@ -1,0 +1,22 @@
+{
+	"name": "creditcard",
+	"properties": {
+		"Name": "creditcard",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://synapsefs@synapsedatalakevisanet.dfs.core.windows.net/creditcard",
+			"Properties": {
+				"FormatType": "parquet",
+				"LinkedServiceName": "synapse-visanet-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
