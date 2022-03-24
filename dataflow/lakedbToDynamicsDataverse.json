@@ -1,19 +1,19 @@
 {
-	"name": "DeltaToLakeDB",
+	"name": "lakedbToDynamicsDataverse",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
-					"linkedService": {
-						"referenceName": "linkedService1",
-						"type": "LinkedServiceReference"
-					},
-					"name": "source1"
+					"name": "lakedbTransactions"
 				}
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "DynamicsEntity1",
+						"type": "DatasetReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -61,21 +61,19 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false,",
-				"     format: 'delta',",
-				"     fileSystem: 'deltalake-container',",
-				"     folderPath: 'CreditCard') ~> source1",
-				"source1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'creditcard',",
-				"     tableName: 'transactions',",
-				"     recreate:true,",
-				"     input(",
-				"          id as string",
-				"     )) ~> sink1"
+				"     tableName: 'transactions') ~> lakedbTransactions",
+				"lakedbTransactions sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
