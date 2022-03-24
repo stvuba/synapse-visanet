@@ -1,0 +1,17 @@
+{
+	"name": "numberofrowsdeltasource",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    count(*)\nFROM\n    OPENROWSET(\n        BULK 'https://datalakestorageubalab.dfs.core.windows.net/deltalake-container/CreditCard/**',\n        FORMAT = 'PARQUET'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
