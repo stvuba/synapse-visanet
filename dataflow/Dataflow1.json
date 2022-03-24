@@ -72,6 +72,7 @@
 				"     format: 'table',",
 				"     database: 'creditcard',",
 				"     tableName: 'transactions',",
+				"     recreate:true,",
 				"     input(",
 				"          id as string",
 				"     )) ~> sink1"
