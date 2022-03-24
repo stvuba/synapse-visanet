@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapse-visanet"
+		},
+		"linkedService1_accountKey": {
+			"value": ""
+		},
+		"synapse-visanet-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"value": "https://datalakestorageubalab.dfs.core.windows.net"
+		},
+		"synapse-visanet-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://synapsedatalakevisanet.dfs.core.windows.net"
+		}
+	}
+}
