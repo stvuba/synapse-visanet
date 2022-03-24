@@ -1,0 +1,78 @@
+{
+	"name": "Dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "linkedService1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          Time as float,",
+				"          V1 as float,",
+				"          V2 as float,",
+				"          V3 as float,",
+				"          V4 as float,",
+				"          V5 as float,",
+				"          V6 as float,",
+				"          V7 as float,",
+				"          V8 as float,",
+				"          V9 as float,",
+				"          V10 as float,",
+				"          V11 as float,",
+				"          V12 as float,",
+				"          V13 as float,",
+				"          V14 as float,",
+				"          V15 as float,",
+				"          V16 as float,",
+				"          V17 as float,",
+				"          V18 as float,",
+				"          V19 as float,",
+				"          V20 as float,",
+				"          V21 as float,",
+				"          V22 as float,",
+				"          V23 as float,",
+				"          V24 as float,",
+				"          V25 as float,",
+				"          V26 as float,",
+				"          V27 as float,",
+				"          V28 as float,",
+				"          amount as float,",
+				"          class as integer,",
+				"          id as string,",
+				"          name as string,",
+				"          state as string,",
+				"          alpha2 as string,",
+				"          lon as float,",
+				"          lat as float,",
+				"          companyen as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'delta',",
+				"     fileSystem: 'deltalake-container',",
+				"     folderPath: 'CreditCard') ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'creditcard',",
+				"     tableName: 'transactions') ~> sink1"
+			]
+		}
+	}
+}
