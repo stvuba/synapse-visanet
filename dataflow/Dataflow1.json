@@ -12,11 +12,7 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [
-				{
-					"name": "sink1"
-				}
-			],
+			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
@@ -24,14 +20,7 @@
 				"     ignoreNoFilesFound: false,",
 				"     format: 'delta',",
 				"     fileSystem: 'deltalake-container',",
-				"     folderPath: 'CreditCard') ~> source1",
-				"source1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     store: 'synapse',",
-				"     databaseType: 'spark',",
-				"     format: 'table',",
-				"     database: '',",
-				"     tableName: '') ~> sink1"
+				"     folderPath: 'CreditCard') ~> source1"
 			]
 		}
 	}
