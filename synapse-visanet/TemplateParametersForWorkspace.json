@@ -5,11 +5,17 @@
 		"workspaceName": {
 			"value": "synapse-visanet"
 		},
+		"Dynamics1_password": {
+			"value": ""
+		},
 		"linkedService1_accountKey": {
 			"value": ""
 		},
 		"synapse-visanet-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
+		},
+		"Dynamics1_properties_typeProperties_username": {
+			"value": "stuba@ubadev.onmicrosoft.com"
 		},
 		"linkedService1_properties_typeProperties_url": {
 			"value": "https://datalakestorageubalab.dfs.core.windows.net"
