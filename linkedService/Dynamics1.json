@@ -1,0 +1,19 @@
+{
+	"name": "Dynamics1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Dynamics",
+		"typeProperties": {
+			"deploymentType": "Online",
+			"serviceUri": "https://orgc6630a85.crm.dynamics.com/",
+			"authenticationType": "Office365",
+			"username": "stuba@ubadev.onmicrosoft.com",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNZTkFQU0VAREQ3RTYxREEtNjVDRS00MzA5LTkzMzUtRkU3RUYyMzBDNzdDX2UxYTNkYmE4LWMyOGItNDI4Mi1hZDFlLWE1ZmY5Y2FlMTQ3MCINCn0="
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
