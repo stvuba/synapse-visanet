@@ -1,9 +1,9 @@
 {
-	"name": "LakeDBToynamicsDataverse",
+	"name": "DeltaToLakeDB",
 	"properties": {
 		"activities": [
 			{
-				"name": "LakeDBToDynamicsDataverse",
+				"name": "DeltaToLakeDB",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "lakedbToDynamicsDataverse",
+						"referenceName": "DeltaToLakeDB",
 						"type": "DataFlowReference"
 					},
 					"compute": {
